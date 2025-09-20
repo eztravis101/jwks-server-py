@@ -2,7 +2,7 @@
 
 A RESTful JWKS server that:
 - Generates RSA key pairs with `kid` and expiry metadata.
-- Serves only **non-expired** public keys at `GET /.well-known/jwks.json` (JWKS format).
+- Serves only non-expired public keys at `GET /.well-known/jwks.json` (JWKS format).
 - Issues JWTs at `POST /auth`.
   - Normal: signed with active key; `exp` in the future.
   - `?expired=1`: signed with expired key; `exp` in the past.
@@ -15,9 +15,8 @@ A RESTful JWKS server that:
 python -m venv .venv && source .venv/bin/activate
 pip install -e .[dev]
 uvicorn app.main:app --port 8080
-```
 
-### Endpoints
+## Endpoints
 
 - `GET /.well-known/jwks.json`
 - `POST /auth`
