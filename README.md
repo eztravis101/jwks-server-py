@@ -15,6 +15,7 @@ A RESTful JWKS server that:
 python -m venv .venv && source .venv/bin/activate
 pip install -e .[dev]
 uvicorn app.main:app --port 8080
+```
 
 ## Endpoints
 
